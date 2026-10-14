@@ -1,0 +1,49 @@
+import type { UIMessage } from "ai";
+
+export type Thread = { id: string; title: string; updatedAt: number; messages: UIMessage[] };
+const KEY = "bakewise-threads";
+
+export function loadThreads(): Thread[] {
+  if (typeof window === "undefined") return [];
+  try {
+    return JSON.parse(localStorage.getItem(KEY) || "[]") as Thread[];
+  } catch {
+    return [];
+  }
+}
+
+export function saveThreads(t: Thread[]) {
+  localStorage.setItem(KEY, JSON.stringify(t));
+  window.dispatchEvent(new Event("bakewise-threads"));
+}
+
+export function createThread(): Thread {
+  const t: Thread = { id: crypto.randomUUID().slice(0, 8), title: "New chat", updatedAt: Date.now(), messages: [] };
+  saveThreads([t, ...loadThreads()]);
+  return t;
+}
+
+export function ensureThread(id: string): Thread {
+  const all = loadThreads();
+  const found = all.find((t) => t.id === id);
+  if (found) return found;
+  const t: Thread = { id, title: "New chat", updatedAt: Date.now(), messages: [] };
+  saveThreads([t, ...all]);
+  return t;
+}
+
+export function updateThread(id: string, messages: UIMessage[]) {
+  const all = loadThreads();
+  const firstUser = messages.find((m) => m.role === "user");
+  const firstText = firstUser?.parts.find((p) => p.type === "text");
+  const title = firstText && "text" in firstText ? firstText.text.slice(0, 40) : "New chat";
+  saveThreads(
+    all
+      .map((t) => (t.id === id ? { ...t, messages, title, updatedAt: Date.now() } : t))
+      .sort((a, b) => b.updatedAt - a.updatedAt),
+  );
+}
+
+export function deleteThread(id: string) {
+  saveThreads(loadThreads().filter((t) => t.id !== id));
+}
