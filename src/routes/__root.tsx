@@ -78,8 +78,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BakeWise AI" },
-      { name: "description", content: "Smart bakery business assistant." },
+      { title: "Sweet Treats — Bakery Management" },
+      { name: "description", content: "Sweet Treats: a warm, AI-powered bakery management platform." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

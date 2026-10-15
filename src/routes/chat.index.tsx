@@ -6,10 +6,12 @@ import { createThread, loadThreads } from "@/lib/threads";
 export const Route = createFileRoute("/chat/")({
   head: () => ({
     meta: [
-      { title: "Bakery AI Chat — BakeWise AI" },
+      { title: "Bakery AI Chat — Sweet Treats" },
       { name: "description", content: "Ask your bakery assistant about schedules, quotes, promotions and costs." },
-      { property: "og:title", content: "Bakery AI Chat — BakeWise AI" },
+      { property: "og:title", content: "Bakery AI Chat — Sweet Treats" },
       { property: "og:description", content: "A conversational assistant for everyday bakery questions." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: ChatIndex,
