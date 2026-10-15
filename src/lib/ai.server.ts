@@ -22,10 +22,10 @@ function runIdFetch(initial?: string) {
 export function streamBakery(opts: {
   messages: ModelMessage[];
   instructions: string;
-  signal?: AbortSignal;
-  runId?: string;
+  signal?: AbortSignal | undefined;
+  runId?: string | undefined;
 }) {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) throw new Error("AI is not configured (missing LOVABLE_API_KEY).");
   const rf = runIdFetch(opts.runId);
   const provider = createOpenAI({
@@ -38,7 +38,7 @@ export function streamBakery(opts: {
     model: provider.responses(MODEL),
     instructions: opts.instructions,
     messages: opts.messages,
-    abortSignal: opts.signal,
+    ...(opts.signal ? { abortSignal: opts.signal } : {}),
     providerOptions: {
       openai: {
         forceReasoning: true,

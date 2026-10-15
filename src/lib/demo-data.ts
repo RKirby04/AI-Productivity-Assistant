@@ -6,7 +6,7 @@ const statuses = ["Baking", "Ready", "Pending", "Collected"] as const;
 
 export const DEMO_ORDERS = Array.from({ length: 24 }, (_, i) => ({
   id: i + 1,
-  customer: names[i % names.length],
+  customer: names[i % names.length]!,
   item: items[i % items.length],
   qty: [6, 2, 4, 3, 1, 5][i % 6] + (i % 3 === 0 ? 1 : 0),
   date: d,
