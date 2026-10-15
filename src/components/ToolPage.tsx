@@ -44,7 +44,7 @@ function sectionMeta(title: string): { icon: ComponentType<{ className?: string 
 function splitSections(md: string) {
   const parts = md.split(/^##\s+/m);
   const intro = parts.shift()?.trim() ?? "";
-  return { intro, sections: parts.map((p) => { const [h, ...rest] = p.split("\n"); return { title: h.replace(/[#*]/g, "").trim(), body: rest.join("\n").trim() }; }) };
+  return { intro, sections: parts.map((p) => { const [h, ...rest] = p.split("\n"); return { title: (h ?? "").replace(/[#*]/g, "").trim(), body: rest.join("\n").trim() }; }) };
 }
 
 function SectionedResult({ text }: { text: string }) {
@@ -72,7 +72,7 @@ function SectionedResult({ text }: { text: string }) {
 function parseEmail(text: string) {
   const m = text.match(/^\s*\*{0,2}Subject:?\*{0,2}:?\s*(.+)$/im);
   if (!m) return { subject: "", body: text.trim() };
-  return { subject: m[1].replace(/\*\*/g, "").trim(), body: text.slice((m.index ?? 0) + m[0].length).trim() };
+  return { subject: (m[1] ?? "").replace(/\*\*/g, "").trim(), body: text.slice((m.index ?? 0) + m[0].length).trim() };
 }
 
 function CopyButton({ value, label }: { value: string; label: string }) {

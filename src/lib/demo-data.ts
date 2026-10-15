@@ -8,7 +8,7 @@ export const DEMO_ORDERS = Array.from({ length: 24 }, (_, i) => ({
   id: i + 1,
   customer: names[i % names.length]!,
   item: items[i % items.length],
-  qty: [6, 2, 4, 3, 1, 5][i % 6] + (i % 3 === 0 ? 1 : 0),
+  qty: [6, 2, 4, 3, 1, 5][i % 6]! + (i % 3 === 0 ? 1 : 0),
   date: d,
   time: `${8 + (i % 9)}:${i % 2 ? "30" : "00"}`,
   status: i < 7 ? "Ready" : statuses[(i % 3) + (i % 3 === 1 ? 1 : 0)] === "Ready" ? "Pending" : statuses[(i % 3) === 1 ? 2 : i % 2 ? 0 : 3],
