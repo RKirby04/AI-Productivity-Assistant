@@ -1,90 +1,108 @@
-Sweet Treats 🍰
+Sweet Treats – AI Bakery Management System
 1. Project Overview
 
-Sweet Treats is an AI-powered bakery management application designed to help bakery owners and staff organise daily operations efficiently. Formerly known as BakeWise AI, the application features a refreshed visual identity with terracotta and chocolate brown colours, elegant serif headings, and a modern, user-friendly interface.
+Sweet Treats is an AI-powered bakery management application designed to help bakery owners and staff manage daily bakery operations efficiently. The system provides tools for customer communication, order management, production planning, ingredient costing, inventory monitoring, and AI-powered baking assistance.
 
-The application brings essential bakery management tools together in one place, including production planning, customer communication, ingredient costing, order notes, inventory monitoring, and AI-powered baking assistance.
+The application features a user-friendly interface with terracotta and chocolate brown colours, elegant typography, and a responsive design suitable for desktop, tablet, and mobile devices.
 
-The application currently uses demo data for sample orders and stock, making it suitable for demonstrating its features and exploring bakery management workflows.
+Sweet Treats was previously known as BakeWise AI and has been redesigned to provide a consistent visual identity and improved user experience.
 
 2. Features
 Dashboard
-Personalised welcome message and current date.
-Pastry photography and bakery-themed design.
-Four summary statistic cards.
-Daily production overview.
-Upcoming collections with items marked as "Due soon".
-Inventory alerts and stock warnings.
-AI-generated baking tips.
-Quick-action shortcuts.
-Clearly labelled demo data.
+Displays a welcome message and today's date.
+Provides four summary statistic cards.
+Shows the daily production overview.
+Displays upcoming collections and highlights those due soon.
+Provides inventory alerts and stock warnings.
+Includes AI baking tips and quick actions.
+Uses clearly labelled demo data.
 Customer Messages
-Generate customer communication content.
-Separate subject line and message fields.
-Editable content before sending or copying.
-Individual Copy buttons for the subject and message.
+Generates customer communication content.
+Provides separate subject and message fields.
+Allows users to edit messages.
+Includes individual Copy buttons for the subject and message.
 Order Notes
-Display order-related results in organised cards with icons.
-Highlight missing information in amber.
-Identify risks and warnings in red.
-Provide helpful tips, loading messages, and empty states.
+Organises order information into separate cards.
+Highlights missing information and potential risks.
+Provides helpful tips, loading messages, and empty states.
 Production Planner
-Organise and review bakery production information.
-Present results in separate, easy-to-read cards.
-Highlight missing details, risks, and warnings.
-Provide contextual tips and loading and empty states.
+Organises bakery production information.
+Displays results in structured cards.
+Highlights missing details, risks, and warnings.
+Provides guidance and clear loading and empty states.
 Ingredients & Costs
-Review ingredient and costing information.
-Display results in structured cards with icons.
-Highlight missing information and potential cost-related risks.
-Provide contextual guidance and clear loading and empty states.
+Presents ingredient and costing information.
+Organises results into cards with icons.
+Highlights missing information and potential cost-related risks.
+Provides helpful tips and status messages.
 Bakery AI Chat
-Start conversations using the New Chat button.
-Browse previous conversations using the conversation list.
-Access conversation navigation on mobile devices.
-Choose from five starter questions.
-Copy individual AI responses.
-Display a "Thinking…" indicator while the AI is processing a response.
-Save chat history in the current browser, according to the application's current implementation.
-Responsive Design and Navigation
-Light sidebar containing all six application pages.
-Top navigation bar displaying the current page name.
-Collapsible sidebar with a menu button on mobile devices.
-Consistent branding, colours, typography, and layout across the application.
-Responsive layouts designed for desktop, tablet, and mobile screens.
+Allows users to start new conversations.
+Provides a conversation list for accessing previous chats.
+Includes five starter questions.
+Allows users to copy individual AI responses.
+Displays a "Thinking…" indicator during processing.
+Stores chat history in the browser.
+Responsive Design
+Provides a sidebar with navigation to all six pages.
+Displays the current page name in the top navigation bar.
+Includes a collapsible sidebar for mobile devices.
+Uses consistent colours, typography, and branding throughout the application.
 3. Tools and Technologies Used
+Lovable: Used to develop and design the application.
+TypeScript: Used for typed application code and TSX component files.
+React: Used for building reusable user interface components, subject to confirmation from the project configuration.
+CSS: Used to style the application, including colours, typography, and responsive layouts.
+AI integration: Supports the application's intended AI-powered bakery assistance and chat features.
+Browser storage: Used to retain chat history locally in the browser.
 
-The project uses a modern web application structure. The following technologies are identifiable from the supplied project information or file paths; the complete dependency list should be confirmed from the project's configuration files.
+The exact libraries, AI provider, and development tools depend on the project's implementation and configuration.
 
-TypeScript (TSX): Used for component files such as src/components/ai-elements/shimmer.tsx.
-React-style components: Used to organise interface elements into reusable components.
-AI-powered features: Intended to support bakery assistance, customer messaging, production planning, ingredient costing, and conversational interactions.
-CSS and styling tools: Used to implement the colour palette, typography, responsive layouts, and visual design.
-Lovable: Used as the application development environment.
-Browser storage: Used for locally saved chat history, as described by the current application design.
+4. Setup Instructions
+Prerequisites
+Access to the Sweet Treats project.
+Node.js installed if required by the project.
+A compatible package manager, such as npm.
+Any required environment variables or API credentials, if applicable.
+Step 1: Open the Project
 
-The exact frameworks, libraries, AI provider, package manager, and build tools should be verified against package.json, the lockfile, and the application's source code before this section is considered final.
+Open the Sweet Treats project in Lovable or obtain the source code from its connected repository, if available.
 
-4. Project Status
+Step 2: Install Dependencies
 
-Sweet Treats has undergone a visual redesign and feature-layout update. The remaining build error and subsequent functional and responsive testing still need to be resolved and verified.
+Open a terminal in the project directory and install the dependencies using the package manager configured for the project.
 
-The application should be considered a work in progress until the build succeeds and the main features have been tested.
+For npm-based projects, run:
 
-5. Future Improvements
+npm install
 
-Potential improvements include:
+Step 3: Configure Environment Variables
 
-Connecting persistent bakery orders and inventory to a database.
-Integrating and verifying an AI service for bakery assistance.
-Adding user authentication and access control.
-Introducing a dedicated Settings page if required.
-Adding automated tests for key features.
-Implementing production-ready deployment and monitoring.
+Check the project configuration for any required environment variables or AI service credentials.
 
-These are possible future enhancements and are not claims about existing functionality.
+Add the necessary values to the appropriate local environment file if required. Never share or commit secret API keys.
 
-Project name: Sweet Treats
-Previous name: BakeWise AI
-Purpose: AI-assisted bakery management
-Development platform: Lovable
+Step 4: Run the Application
+
+If the project defines the appropriate development script in package.json, run:
+
+npm run dev
+
+Step 5: Open the Application
+
+Open the local URL displayed in the terminal in your web browser. For a typical Vite development server, this may be:
+
+(https://rafiqah-kirby-ai-assistant.lovable.app)
+
+The actual URL may vary depending on the project configuration.
+
+Step 6: Test the Application
+
+Verify that:
+
+All six pages load correctly.
+Navigation works on desktop and mobile.
+Demo data displays correctly.
+Copy buttons and chat interactions work as expected.
+The application builds without errors.
+
+Note: Confirm that the project builds successfully before considering setup complete. The previously reported error in src/components/ai-elements/shimmer.tsx must be resolved and tested.
