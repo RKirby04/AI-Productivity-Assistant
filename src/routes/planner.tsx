@@ -13,6 +13,10 @@ export const Route = createFileRoute("/planner")({
   component: () => (
     <ToolPage
       tool="planner"
+      submitLabel="Build my baking plan"
+      emptyTitle="Your day's plan will appear here"
+      emptyHint="Priorities, a time-by-time schedule, quantities to bake and warnings about oven capacity or overproduction."
+      tips={["List each order with its collection time.", "Mention prep needs like proving or chilling.", "Past sales help avoid overproduction."]}
       badge="AI planning"
       title="Production planner"
       description="Tell us your orders, expected demand and resources. Get a prioritised schedule with warnings for unrealistic timing or overproduction."
@@ -25,7 +29,7 @@ export const Route = createFileRoute("/planner")({
       <Field label="Expected demand or past sales">
         <textarea name="demand" rows={3} className={fieldClass} placeholder="Usually sell ~60 croissants, 40 muffins, 15 loaves on Saturdays" />
       </Field>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid gap-3 sm:grid-cols-3">
         <Field label="Ovens"><input name="ovens" className={fieldClass} defaultValue="2 deck ovens" /></Field>
         <Field label="Staff"><input name="staff" className={fieldClass} defaultValue="3 bakers" /></Field>
         <Field label="Hours"><input name="hours" className={fieldClass} defaultValue="5am–3pm" /></Field>

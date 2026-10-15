@@ -13,12 +13,16 @@ export const Route = createFileRoute("/research")({
   component: () => (
     <ToolPage
       tool="research"
+      submitLabel="Calculate costs & margins"
+      emptyTitle="Your cost breakdown will appear here"
+      emptyHint="Ingredient costs, cost per batch and per item, margin at your selling price, waste tips and product ideas."
+      tips={["Use your own supplier prices — Sweet Treats never invents prices.", "Anything missing is listed as an assumption, not a verified cost."]}
       badge="AI insights"
       title="Ingredients & business research"
       description="Add your recipe, ingredient prices and question. The AI estimates costs and margins and flags anything missing."
       buildInput={(f) => `Product: ${f.get("product")}\nBatch yield: ${f.get("yield")}\nIngredients & prices:\n${f.get("ingredients")}\nCurrent selling price: ${f.get("price") || "not given"}\nQuestion: ${f.get("question") || "Cost and margin analysis"}`}
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid gap-3 sm:grid-cols-2">
         <Field label="Product"><input name="product" required className={fieldClass} placeholder="Blueberry muffins" /></Field>
         <Field label="Batch yield"><input name="yield" className={fieldClass} placeholder="24 muffins" /></Field>
       </div>

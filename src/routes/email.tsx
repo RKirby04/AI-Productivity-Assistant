@@ -13,6 +13,10 @@ export const Route = createFileRoute("/email")({
   component: () => (
     <ToolPage
       tool="email"
+      submitLabel="Write my message"
+      emptyTitle="Your message will appear here"
+      emptyHint="You'll get a subject line and an editable message you can copy straight into email or WhatsApp."
+      tips={["Include dates, prices and deposit details you want mentioned.", "Add the customer's name for a personal touch.", "You can edit the message before copying it."]}
       badge="AI writing"
       title="Smart customer messages"
       description="Generate a subject line and editable message, then copy it to email or WhatsApp."

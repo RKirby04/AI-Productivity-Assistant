@@ -13,6 +13,10 @@ export const Route = createFileRoute("/orders")({
   component: () => (
     <ToolPage
       tool="orders"
+      submitLabel="Summarise this order"
+      emptyTitle="Your order summary will appear here"
+      emptyHint="Sections for the order, deadlines, missing details, possible problems and a baker's checklist."
+      tips={["Paste the whole conversation — WhatsApp, email or your own notes.", "Missing details and risks are highlighted so you can ask the customer early."]}
       badge="AI analysis"
       title="Order notes summarizer"
       description="Paste a customer conversation or rough notes. Get flavour, size, quantity, decoration, deadlines, missing info and a baker's checklist."
