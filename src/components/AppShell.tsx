@@ -86,7 +86,7 @@ export function AppShell({ children, title, actions }: { children: ReactNode; ti
               <div className="mt-auto"><SidebarFooter /></div>
             </SheetContent>
           </Sheet>
-          <h1 className="min-w-0 flex-1 truncate font-display text-lg font-semibold text-primary md:text-xl">{current}</h1>
+          <p className="min-w-0 flex-1 truncate font-display text-lg font-semibold text-primary md:text-xl">{current}</p>
           <div className="flex shrink-0 items-center gap-2">{actions}</div>
         </header>
         <main className="min-w-0 flex-1">{children}</main>
