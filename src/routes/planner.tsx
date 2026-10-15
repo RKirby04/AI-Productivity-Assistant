@@ -8,6 +8,8 @@ export const Route = createFileRoute("/planner")({
       { name: "description", content: "Plan daily baking schedules around orders, oven capacity and staff." },
       { property: "og:title", content: "Production Planner — Sweet Treats" },
       { property: "og:description", content: "AI daily baking schedules that prioritise urgent orders and reduce waste." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: () => (

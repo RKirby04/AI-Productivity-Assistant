@@ -8,6 +8,8 @@ export const Route = createFileRoute("/orders")({
       { name: "description", content: "Turn messy customer chats into clear baking instructions and checklists." },
       { property: "og:title", content: "Order Notes Summarizer — Sweet Treats" },
       { property: "og:description", content: "Extract flavours, sizes, dates and missing details from order notes." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: () => (

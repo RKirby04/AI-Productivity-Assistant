@@ -8,6 +8,8 @@ export const Route = createFileRoute("/email")({
       { name: "description", content: "Write order confirmations, quotes, reminders and promotions for your bakery customers." },
       { property: "og:title", content: "Customer Message Generator — Sweet Treats" },
       { property: "og:description", content: "AI-written bakery customer emails and WhatsApp messages." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
   }),
   component: () => (
