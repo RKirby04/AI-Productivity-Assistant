@@ -10,14 +10,14 @@ import { Message, MessageContent, MessageResponse } from "@/components/ai-elemen
 import { PromptInput, PromptInputTextarea, PromptInputFooter, PromptInputSubmit } from "@/components/ai-elements/prompt-input";
 import { Shimmer } from "@/components/ai-elements/shimmer";
 import { createThread, deleteThread, ensureThread, loadThreads, updateThread, type Thread } from "@/lib/threads";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-sweet-treats.png";
 
 export const Route = createFileRoute("/chat/$threadId")({
   head: () => ({
     meta: [
-      { title: "Bakery AI Chat — BakeWise AI" },
+      { title: "Bakery AI Chat — Sweet Treats" },
       { name: "description", content: "Chat with your bakery assistant about schedules, quotes, promotions and costs." },
-      { property: "og:title", content: "Bakery AI Chat — BakeWise AI" },
+      { property: "og:title", content: "Bakery AI Chat — Sweet Treats" },
       { property: "og:description", content: "A conversational assistant for everyday bakery questions." },
     ],
   }),

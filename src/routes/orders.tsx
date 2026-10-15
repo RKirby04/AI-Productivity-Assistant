@@ -4,9 +4,9 @@ import { ToolPage, Field, fieldClass } from "@/components/ToolPage";
 export const Route = createFileRoute("/orders")({
   head: () => ({
     meta: [
-      { title: "Order Notes Summarizer — BakeWise AI" },
+      { title: "Order Notes Summarizer — Sweet Treats" },
       { name: "description", content: "Turn messy customer chats into clear baking instructions and checklists." },
-      { property: "og:title", content: "Order Notes Summarizer — BakeWise AI" },
+      { property: "og:title", content: "Order Notes Summarizer — Sweet Treats" },
       { property: "og:description", content: "Extract flavours, sizes, dates and missing details from order notes." },
     ],
   }),

@@ -6,9 +6,9 @@ import { DEMO_ORDERS, DEMO_STOCK } from "@/lib/demo-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "BakeWise AI — Smart Bakery Business Assistant" },
+      { title: "Sweet Treats — Smart Bakery Business Assistant" },
       { name: "description", content: "Bake smarter, waste less, grow your bakery: orders, production planning, customer messages and AI insights in one dashboard." },
-      { property: "og:title", content: "BakeWise AI — Smart Bakery Business Assistant" },
+      { property: "og:title", content: "Sweet Treats — Smart Bakery Business Assistant" },
       { property: "og:description", content: "One AI-powered dashboard for bakery operations, customers and planning." },
     ],
   }),

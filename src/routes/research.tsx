@@ -4,9 +4,9 @@ import { ToolPage, Field, fieldClass } from "@/components/ToolPage";
 export const Route = createFileRoute("/research")({
   head: () => ({
     meta: [
-      { title: "Ingredient & Cost Assistant — BakeWise AI" },
+      { title: "Ingredient & Cost Assistant — Sweet Treats" },
       { name: "description", content: "Estimate recipe costs and margins, reduce waste and compare product ideas." },
-      { property: "og:title", content: "Ingredient & Cost Assistant — BakeWise AI" },
+      { property: "og:title", content: "Ingredient & Cost Assistant — Sweet Treats" },
       { property: "og:description", content: "AI recipe costing, margins and waste-reduction ideas for bakeries." },
     ],
   }),
